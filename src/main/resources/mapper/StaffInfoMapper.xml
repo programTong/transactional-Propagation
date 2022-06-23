@@ -10,7 +10,7 @@
   </sql>
 
   <insert id="insert" parameterType="com.mask.common.model.entity.StaffInfo" useGeneratedKeys="true" keyProperty="staffID">
-    insert into KY_StaffInfo (StaffID,  StaffName)
+    insert into StaffInfo (StaffID,  StaffName)
     values (#{staffID,jdbcType=INTEGER}, #{staffName,jdbcType=VARCHAR})
   </insert>
 
