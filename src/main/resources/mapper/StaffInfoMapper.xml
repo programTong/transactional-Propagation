@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.mask.auth.mapper.StaffInfoMapper">
+  <resultMap id="BaseResultMap" type="com.mask.common.model.entity.StaffInfo">
+    <id column="StaffID" jdbcType="INTEGER" property="staffID" />
+    <result column="StaffName" jdbcType="VARCHAR" property="staffName" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    StaffID,StaffName
+  </sql>
+
+  <insert id="insert" parameterType="com.mask.common.model.entity.StaffInfo" useGeneratedKeys="true" keyProperty="staffID">
+    insert into KY_StaffInfo (StaffID,  StaffName)
+    values (#{staffID,jdbcType=INTEGER}, #{staffName,jdbcType=VARCHAR})
+  </insert>
+
+</mapper>
